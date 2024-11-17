@@ -28,9 +28,10 @@ jobs:
         sphinx-build -b html docs/source docs/build
 
     - name: Deploy to GitHub Pages
-      uses: jamesives/github-pages-deploy-action@v4  # Using the latest stable version
+      uses: jamesives/github-pages-deploy-action@v4
       with:
-        branch: gh-pages  # The branch to deploy the documentation to
-        folder: docs/build  # The folder containing the built docs
+        branch: gh-pages
+        folder: docs/build
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the secret you created
+
