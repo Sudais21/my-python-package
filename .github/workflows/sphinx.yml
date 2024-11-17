@@ -31,7 +31,8 @@ jobs:
       uses: jamesives/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: docs/build
+        folder: docs/build  # Path to the build folder
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the secret you created
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use your secret PAT
+
 
